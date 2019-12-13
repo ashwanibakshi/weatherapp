@@ -19,7 +19,7 @@ app.get('/',function(req,res){
 
 app.post('/',function(req,res){
     weather.setCity(req.body.city);
-    weather.setAPPID('38fb1d49d1841f574f0a79044662118a');
+    weather.setAPPID();
     weather.getAllWeather(function(err,temp){
         console.log(temp);
         res.render('home',{temp:temp});
